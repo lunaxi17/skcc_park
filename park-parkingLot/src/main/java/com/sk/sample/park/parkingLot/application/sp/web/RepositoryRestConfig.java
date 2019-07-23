@@ -1,4 +1,4 @@
-package com.sk.sample.park.product.application.sp.web;
+package com.sk.sample.park.parkingLot.application.sp.web;
 
 import java.util.stream.Collectors;
 
