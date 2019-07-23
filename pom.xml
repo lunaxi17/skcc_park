@@ -3,29 +3,29 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.sk.sample</groupId>
-	<artifactId>mall</artifactId>
+	<artifactId>park</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	<name>mall</name>
+	<name>park</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 
-		<mall-shared.version>0.0.1-SNAPSHOT</mall-shared.version>
+		<park-shared.version>0.0.1-SNAPSHOT</park-shared.version>
 		<spring-boot.version>1.5.20.RELEASE</spring-boot.version>
 		<querydsl.version>4.2.1</querydsl.version>
 		<swagger.version>2.9.2</swagger.version>
 	</properties>
 
 	<modules>
-		<module>mall-shared</module>
-		<module>mall-account</module>
-		<module>mall-product</module>
-   		<module>mall-order</module>
-   		<module>mall-payment</module>
-		<module>mall-delivery</module>
+		<module>park-shared</module>
+		<module>park-account</module>
+		<module>park-product</module>
+   		<module>park-order</module>
+   		<module>park-payment</module>
+		<module>park-delivery</module>
 	</modules>
 
 	<dependencies> 
@@ -90,8 +90,8 @@
 			</dependency>
 			<dependency>
 				<groupId>com.sk.sample</groupId>
-				<artifactId>mall-shared</artifactId>
-				<version>${mall-shared.version}</version>
+				<artifactId>park-shared</artifactId>
+				<version>${park-shared.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
