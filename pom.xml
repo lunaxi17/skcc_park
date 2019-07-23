@@ -23,6 +23,7 @@
 		<module>park-shared</module>
 		<module>park-account</module>
 		<module>park-parkingLot</module>
+		<module>park-parking</module>
    		<module>park-order</module>
    		<module>park-payment</module>
 		<module>park-delivery</module>
