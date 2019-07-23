@@ -7,7 +7,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import com.querydsl.core.types.Predicate;
+//import com.querydsl.core.types.Predicate;
 import com.sk.sample.park.account.domain.model.Account;
 import com.sk.sample.park.account.domain.model.MemberType;
 import com.sk.sample.park.account.domain.model.MembershipLevelType;
@@ -91,20 +91,20 @@ public class AccountApplication {
 	}
 	
 	public void executeExample5(AccountRepository accountRepository) {
-		List<Account> account = accountRepository.findAll(QAccount.account.address.zipCode.eq(12345));
+		List<Account> account = (List<Account>) accountRepository.findAll(QAccount.account.address.zipCode.eq(12345));
 		System.out.println("Result: " + account.toString());
 	}
 	
 	public void executeExample6(AccountRepository accountRepository) {
-		List<Account> account = accountRepository.findAll(QAccount.account.address.homeAddress.like("성남"));
+		List<Account> account = (List<Account>) accountRepository.findAll(QAccount.account.address.homeAddress.like("성남"));
 		System.out.println("Result: " + account.toString());
 	}
 	
 	public void executeExample7(AccountRepository accountRepository) {
-		Predicate predicate = QAccount.account.memberType.eq(MemberType.BUYER).and(
-				              QAccount.account.membershipLevelType.eq(MembershipLevelType.VIP));
-		List<Account> account = accountRepository.findAll(predicate);
-		System.out.println("Result: " + account.toString());
+		//Predicate predicate = QAccount.account.memberType.eq(MemberType.BUYER).and(
+		//		              QAccount.account.membershipLevelType.eq(MembershipLevelType.VIP));
+		//List<Account> account = accountRepository.findAll(predicate);
+		//System.out.println("Result: " + account.toString());
 	}
 	
 	/*
