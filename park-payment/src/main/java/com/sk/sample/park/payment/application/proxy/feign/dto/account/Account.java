@@ -3,7 +3,7 @@ package com.sk.sample.park.payment.application.proxy.feign.dto.account;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 
-import com.sk.sample.park.shared.domain.Address;
+import com.sk.sample.park.payment.domain.Address;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;

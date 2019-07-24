@@ -2,8 +2,8 @@ package com.sk.sample.park.payment.domain.model;
 
 import javax.persistence.Entity;
 
-import com.sk.sample.park.shared.base.AbstractEntity;
-import com.sk.sample.park.shared.base.AggregateRoot;
+import com.sk.sample.park.payment.domain.AbstractEntity;
+import com.sk.sample.park.payment.domain.AggregateRoot;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;

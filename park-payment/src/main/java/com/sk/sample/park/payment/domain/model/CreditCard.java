@@ -2,7 +2,7 @@ package com.sk.sample.park.payment.domain.model;
 
 import javax.persistence.Embeddable;
 
-import com.sk.sample.park.shared.base.ValueObject;
+import com.sk.sample.park.payment.domain.ValueObject;
 
 import lombok.Builder;
 import lombok.Data;

@@ -14,10 +14,12 @@
 	</parent>
 
 	<dependencies>
+	<!-- 
 		<dependency>
 			<groupId>com.sk.sample</groupId>
 			<artifactId>park-shared</artifactId>
 		</dependency>
+	-->
 	</dependencies>
-
+ 	
 </project>

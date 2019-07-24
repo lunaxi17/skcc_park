@@ -11,7 +11,6 @@ import com.sk.sample.park.payment.application.proxy.feign.dto.account.Account;
 import com.sk.sample.park.payment.domain.model.CreditCard;
 import com.sk.sample.park.payment.domain.model.Payment;
 import com.sk.sample.park.payment.domain.repository.PaymentRepository;
-import com.sk.sample.park.shared.base.ValueObject;
 
 @Service
 public class PaymentLogic implements PaymentService {

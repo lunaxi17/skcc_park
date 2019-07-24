@@ -7,13 +7,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import com.querydsl.core.types.Predicate;
+import com.sk.sample.park.account.domain.Address;
 import com.sk.sample.park.account.domain.model.Account;
-import com.sk.sample.park.account.domain.model.MemberType;
 import com.sk.sample.park.account.domain.model.CreditCard;
+import com.sk.sample.park.account.domain.model.MemberType;
 import com.sk.sample.park.account.domain.model.QAccount;
 import com.sk.sample.park.account.domain.repository.AccountRepository;
-import com.sk.sample.park.shared.domain.Address;
 
 @SpringBootApplication
 public class AccountApplication {

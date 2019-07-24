@@ -4,9 +4,9 @@ import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 
-import com.sk.sample.park.shared.base.AbstractEntity;
-import com.sk.sample.park.shared.base.AggregateRoot;
-import com.sk.sample.park.shared.domain.Address;
+import com.sk.sample.park.account.domain.AbstractEntity;
+import com.sk.sample.park.account.domain.Address;
+import com.sk.sample.park.account.domain.AggregateRoot;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
