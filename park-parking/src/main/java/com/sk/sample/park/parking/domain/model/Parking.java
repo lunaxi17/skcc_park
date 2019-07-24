@@ -1,4 +1,4 @@
-package com.sk.sample.park.order.domain.model;
+package com.sk.sample.park.parking.domain.model;
 
 import javax.persistence.Entity;
 

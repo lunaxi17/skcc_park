@@ -1,6 +1,6 @@
-package com.sk.sample.park.order.domain.service;
+package com.sk.sample.park.parking.domain.service;
 
-public interface OrderService {
+public interface ParkingService {
 	void parkIn(String parkingLotId, String carNumber);
 	void parkOut(String parkingLotId, String carNumber);
 }

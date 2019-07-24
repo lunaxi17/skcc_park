@@ -1,17 +1,17 @@
-package com.sk.sample.park.order.domain.service;
+package com.sk.sample.park.parking.domain.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.sk.sample.park.order.application.proxy.feign.ParkinglotProxy;
-import com.sk.sample.park.order.application.proxy.feign.dto.parkinglot.Parkinglot;
-import com.sk.sample.park.order.domain.model.Parking;
-import com.sk.sample.park.order.domain.repository.OrderRepository;
+import com.sk.sample.park.parking.application.proxy.feign.ParkinglotProxy;
+import com.sk.sample.park.parking.application.proxy.feign.dto.parkinglot.Parkinglot;
+import com.sk.sample.park.parking.domain.model.Parking;
+import com.sk.sample.park.parking.domain.repository.ParkingRepository;
 
-@Service("orderLogic")
-public class OrderLogic implements OrderService {
+@Service("parkingLogic")
+public class ParkingLogic implements ParkingService {
 	@Autowired
-	private OrderRepository orderRepository;
+	private ParkingRepository orderRepository;
 	
 	
 	@Autowired

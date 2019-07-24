@@ -1,4 +1,4 @@
-package com.sk.sample.park.order.application.proxy.feign.dto.parkinglot;
+package com.sk.sample.park.parking.application.proxy.feign.dto.parkinglot;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;

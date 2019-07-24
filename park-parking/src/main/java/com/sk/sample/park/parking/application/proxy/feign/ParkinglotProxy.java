@@ -1,4 +1,4 @@
-package com.sk.sample.park.order.application.proxy.feign;
+package com.sk.sample.park.parking.application.proxy.feign;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.netflix.feign.FeignClient;
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.sk.sample.park.order.application.proxy.feign.dto.parkinglot.Parkinglot;
+import com.sk.sample.park.parking.application.proxy.feign.dto.parkinglot.Parkinglot;
 
 @Service
 public class ParkinglotProxy {

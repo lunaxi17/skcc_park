@@ -1,4 +1,4 @@
-package com.sk.sample.park.order.application.sp.web;
+package com.sk.sample.park.parking.application.sp.web;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -28,7 +28,7 @@ public class SwaggerConfig {
 	
 	public ApiInfo getApiInfo() {
 		return new ApiInfoBuilder()
-				.title("Order Service")
+				.title("Parking Service")
 				.description("This pages documents Purchase Restful Web Service endpoints")
 				.version("0.1")
 				.build();
