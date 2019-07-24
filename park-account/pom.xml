@@ -6,27 +6,12 @@
 
 	<artifactId>park-account</artifactId>
 	<name>park-account</name>
-	
-	<packaging>jar</packaging>
 
 	<parent>
 		<groupId>com.sk.sample</groupId>
 		<artifactId>park</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	
-	
-	
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
-
-		<park-shared.version>0.0.1-SNAPSHOT</park-shared.version>
-		<spring-boot.version>1.5.20.RELEASE</spring-boot.version>
-		<querydsl.version>4.2.1</querydsl.version>
-		<swagger.version>2.9.2</swagger.version>
-	</properties>
 
 	<dependencies>
 		<dependency>
@@ -50,59 +35,6 @@
 					</archive>
 				</configuration>
 			</plugin>
-		
-		
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<version>${spring-boot.version}</version>
-			</plugin>
-			
-			
-			<plugin>
-				<groupId>com.querydsl</groupId>
-				<artifactId>querydsl-maven-plugin</artifactId>
-				<version>${querydsl.version}</version>
-				<executions>
-					<execution>
-						<phase>process-classes</phase>
-						<goals>
-							<goal>jpa-export</goal>
-						</goals>
-						<configuration>
-							<targetFolder>target/generated-sources/java</targetFolder>
-							<packages>
-								<package>com.sk.sample</package>
-							</packages>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-
-			<plugin>
-				<groupId>com.mysema.maven</groupId>
-				<artifactId>apt-maven-plugin</artifactId>
-				<version>1.1.3</version>
-				<dependencies>
-					<dependency>
-						<groupId>com.querydsl</groupId>
-						<artifactId>querydsl-apt</artifactId>
-						<version>${querydsl.version}</version>  
-					</dependency>
-				</dependencies>
-				<executions>
-					<execution>
-						<phase>generate-sources</phase>
-						<goals>
-							<goal>process</goal>
-						</goals>
-						<configuration>
-							<outputDirectory>target/generated-sources/java</outputDirectory>
-							<processor>com.querydsl.apt.jpa.JPAAnnotationProcessor</processor>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
 		</plugins>
 	</build>
 	
@@ -113,10 +45,5 @@
 			<url>file://${project.basedir}/lib</url> 
 		</repository> 
 	</repositories>
-
-	
-
-
-	
 
 </project>
