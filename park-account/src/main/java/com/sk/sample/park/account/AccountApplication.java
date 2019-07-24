@@ -33,21 +33,21 @@ public class AccountApplication {
 		
 	public void insertAccounts(AccountRepository accountRepository) {
 		
-		Account account1 = new Account("king@sk.com", "아더왕", MemberType.BUYER, "11111111");
+		Account account1 = new Account("king@sk.com", "아더왕", MemberType.BUYER, "111");
 		account1.setCreditCard(new CreditCard("11111111", "111"));
 		accountRepository.save(account1);
 		
 		
-		Account account2 = new Account("kim@sk.com", "김정은", MemberType.BUYER, "22222222");
+		Account account2 = new Account("kim@sk.com", "김정은", MemberType.BUYER, "222");
 		//account2.setAddress(new Address(12345, "서울시 강남구"));
 		account2.setCreditCard(new CreditCard("22222222", "222"));
 		accountRepository.save(account2);
 		
-		Account account3 = new Account("moon@gmail.com", "문재인", MemberType.SELLER, "33333333");
+		Account account3 = new Account("moon@gmail.com", "문재인", MemberType.SELLER, "333");
 		account3.setCreditCard(new CreditCard("33333333", "333"));
 		accountRepository.save(account3);
 		
-		Account account4 = new Account("kill@sk.com", "아베이놈", MemberType.BUYER, "44444444");
+		Account account4 = new Account("kill@sk.com", "아베이놈", MemberType.BUYER, "444");
 		account4.setCreditCard(new CreditCard("44444444", "444"));
 		accountRepository.save(account4);  
 	}
