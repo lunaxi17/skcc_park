@@ -1,4 +1,4 @@
-package com.sk.sample.park.parkingLot.domain.model;
+package com.sk.sample.park.parkinglot.domain.model;
 
 import javax.persistence.Entity;
 
@@ -11,7 +11,7 @@ import lombok.EqualsAndHashCode;
 @Data
 @EqualsAndHashCode(callSuper=true)
 @Entity
-public class ParkingLot extends AbstractEntity implements AggregateRoot {
+public class Parkinglot extends AbstractEntity implements AggregateRoot {
 	private String parkingLotId;	//주차장 일련번호
 	private String name;			//주차장 명
 	private String address;			//주차장 위치
@@ -20,7 +20,7 @@ public class ParkingLot extends AbstractEntity implements AggregateRoot {
 	private int parkingCount;		//주차장 주차 수
 	
 	//constructor
-	public ParkingLot(String parkingLotId, String name, String address, int pricePerMin, int parkingAmount) {
+	public Parkinglot(String parkingLotId, String name, String address, int pricePerMin, int parkingAmount) {
 		this.parkingLotId = parkingLotId;
 		this.name = name;
 		this.address = address;
