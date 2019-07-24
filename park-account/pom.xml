@@ -57,10 +57,6 @@
 		</dependency>
 		<dependency>
 			<groupId>com.querydsl</groupId>
-			<artifactId>querydsl-core</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.querydsl</groupId>
 			<artifactId>querydsl-jpa</artifactId>
 		</dependency>
 		<dependency>
@@ -153,11 +149,6 @@
 					<dependency>
 						<groupId>com.querydsl</groupId>
 						<artifactId>querydsl-apt</artifactId>
-						<version>${querydsl.version}</version>  
-					</dependency>
-					<dependency>
-						<groupId>com.querydsl</groupId>
-						<artifactId>querydsl-core</artifactId>
 						<version>${querydsl.version}</version>  
 					</dependency>
 				</dependencies>
