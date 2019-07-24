@@ -3,34 +3,25 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-
+	
+	<groupId>com.sk.sample</groupId>
 	<artifactId>park-account</artifactId>
-	<name>park-account</name>
+	<name>park-account</name>	
+	<version>0.0.1-SNAPSHOT</version>
 
-	<parent>
-		<groupId>com.sk.sample</groupId>
-		<artifactId>park</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
-	</parent>
 	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
-
-		<park-shared.version>0.0.1-SNAPSHOT</park-shared.version>
+		
 		<spring-boot.version>1.5.20.RELEASE</spring-boot.version>
 		<querydsl.version>4.2.1</querydsl.version>
 		<swagger.version>2.9.2</swagger.version>
 	</properties>
 
+
 	<dependencies>
-	<!-- 
-		<dependency>
-			<groupId>com.sk.sample</groupId>
-			<artifactId>park-shared</artifactId>
-		</dependency>
-	-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -91,37 +82,18 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
-			<dependency>
-				<groupId>com.sk.sample</groupId>
-				<artifactId>park-shared</artifactId>
-				<version>${park-shared.version}</version>
-			</dependency>
 		</dependencies>
 	</dependencyManagement>
-	
+
 	<build>
 		<plugins>
-			<plugin>
-				<!-- Build an executable JAR -->
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-jar-plugin</artifactId>
-				<version>2.4</version>
-				<configuration>
-					<archive>
-						<manifest>
-							<mainClass>com.sk.sample.park.account.AccountApplication</mainClass>
-						</manifest>
-					</archive>
-				</configuration>
-			</plugin>
-			
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<version>${spring-boot.version}</version>
 			</plugin>
 			
-			<!-- 
+			
 			<plugin>
 				<groupId>com.querydsl</groupId>
 				<artifactId>querydsl-maven-plugin</artifactId>
@@ -141,7 +113,7 @@
 					</execution>
 				</executions>
 			</plugin>
- 			-->
+
 			<plugin>
 				<groupId>com.mysema.maven</groupId>
 				<artifactId>apt-maven-plugin</artifactId>
@@ -168,13 +140,5 @@
 			</plugin>
 		</plugins>
 	</build>
-	
-	<repositories> 
-		<repository> 
-			<id>sample-repository</id> 
-			<name>local repository</name> 
-			<url>file://${project.basedir}/lib</url> 
-		</repository> 
-	</repositories>
 
 </project>
