@@ -1,4 +1,4 @@
-package com.sk.sample.park.parkingLot.application.sp.web;
+package com.sk.sample.park.parkinglot.application.sp.web;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
