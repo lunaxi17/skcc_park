@@ -1,6 +1,0 @@
-com\sk\sample\park\payment\PaymentApplication.class
-com\sk\sample\park\payment\application\sp\web\RepositoryRestConfig.class
-com\sk\sample\park\payment\application\sp\web\SwaggerConfig.class
-com\sk\sample\park\payment\domain\model\QCredit.class
-com\sk\sample\park\payment\domain\model\QPayment.class
-com\sk\sample\park\payment\domain\model\QCreditCard.class
