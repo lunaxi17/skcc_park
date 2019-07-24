@@ -9,6 +9,7 @@ import com.sk.sample.park.account.domain.model.Account;
 
 public interface AccountService {
 	Account findById(Long id);
+	Account findByCarNumber(String carNumber);
 	List<Account> findAll();
 	Page<Account> findAll(Pageable pageable);
 	

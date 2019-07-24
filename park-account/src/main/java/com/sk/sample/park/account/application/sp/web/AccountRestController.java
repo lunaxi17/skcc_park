@@ -72,5 +72,11 @@ public class AccountRestController implements AccountService {
 		return accountService.findAll(pageable); 
 	}
 
+	@Override
+	@GetMapping("/search/carNumber")
+	public Account findByCarNumber(@RequestParam("carNumber") String carNumber) {
+		return accountService.findByCarNumber(carNumber);
+	}
+	
 
 }

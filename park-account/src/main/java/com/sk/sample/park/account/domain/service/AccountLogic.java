@@ -25,6 +25,12 @@ public class AccountLogic implements AccountService {
 
 	@Override
 	@Transactional(readOnly=true)
+	public Account findByCarNumber(String carNumber) {
+		return accountRepository.findByCarNumber(carNumber);
+	}
+	
+	@Override
+	@Transactional(readOnly=true)
 	public List<Account> findByNameLike(String name) {
 		return accountRepository.findByNameLike(name);
 	}

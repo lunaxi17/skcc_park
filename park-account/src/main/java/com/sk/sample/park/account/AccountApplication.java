@@ -7,10 +7,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-//import com.querydsl.core.types.Predicate;
+import com.querydsl.core.types.Predicate;
 import com.sk.sample.park.account.domain.model.Account;
 import com.sk.sample.park.account.domain.model.MemberType;
-import com.sk.sample.park.account.domain.model.MembershipLevelType;
+import com.sk.sample.park.account.domain.model.CreditCard;
 import com.sk.sample.park.account.domain.model.QAccount;
 import com.sk.sample.park.account.domain.repository.AccountRepository;
 import com.sk.sample.park.shared.domain.Address;
@@ -33,20 +33,23 @@ public class AccountApplication {
 		
 	public void insertAccounts(AccountRepository accountRepository) {
 		
-		Account account1 = new Account("hong@sk.com", "홍길동", MemberType.BUYER);
+		Account account1 = new Account("king@sk.com", "아더왕", MemberType.BUYER, "11111111");
+		account1.setCreditCard(new CreditCard("11111111", "111"));
 		accountRepository.save(account1);
 		
-		Account account2 = new Account("kang@sk.com", "강호동", MemberType.BUYER, MembershipLevelType.VIP);
-		account2.setAddress(new Address(12345, "서울시 강남구"));
+		
+		Account account2 = new Account("kim@sk.com", "김정은", MemberType.BUYER, "22222222");
+		//account2.setAddress(new Address(12345, "서울시 강남구"));
+		account2.setCreditCard(new CreditCard("22222222", "222"));
 		accountRepository.save(account2);
 		
-		Account account3 = new Account("yu@gmail.com", "유재석", MemberType.SELLER);
-		account3.setAddress(new Address(10000, "경기도 성남시"));
+		Account account3 = new Account("moon@gmail.com", "문재인", MemberType.SELLER, "33333333");
+		account3.setCreditCard(new CreditCard("33333333", "333"));
 		accountRepository.save(account3);
 		
-		Account account4 = new Account("shin@sk.com", "신동엽", MemberType.BUYER, MembershipLevelType.GOLD);
-		account4.setAddress(new Address(12345, "서울시 강남구"));
-		accountRepository.save(account4);
+		Account account4 = new Account("kill@sk.com", "아베이놈", MemberType.BUYER, "44444444");
+		account4.setCreditCard(new CreditCard("44444444", "444"));
+		accountRepository.save(account4);  
 	}
 	
 	public void displayAccounts(AccountRepository accountRepository) {
@@ -62,13 +65,14 @@ public class AccountApplication {
 	
 	
 	public void executeExample1(AccountRepository accountRepository) {
-		Account account = accountRepository.findByEmail("hong@sk.com");
+/*		Account account = accountRepository.findByEmail("hong@sk.com");
 		
 		account.setAddress(Address.builder().zipCode(10000).homeAddress("경기도 성남시").build());
 		accountRepository.save(account);
 		
-		displayAccounts(accountRepository);
+		displayAccounts(accountRepository);  */
 	}
+
 	
 	public void executeExample2(AccountRepository accountRepository) {
 		List<Account> account = accountRepository.findByAddressZipCode(12345);
@@ -91,21 +95,22 @@ public class AccountApplication {
 	}
 	
 	public void executeExample5(AccountRepository accountRepository) {
-		List<Account> account = (List<Account>) accountRepository.findAll(QAccount.account.address.zipCode.eq(12345));
+		List<Account> account = accountRepository.findAll(QAccount.account.address.zipCode.eq(12345));
 		System.out.println("Result: " + account.toString());
 	}
 	
 	public void executeExample6(AccountRepository accountRepository) {
-		List<Account> account = (List<Account>) accountRepository.findAll(QAccount.account.address.homeAddress.like("성남"));
+		List<Account> account = accountRepository.findAll(QAccount.account.address.homeAddress.like("성남"));
 		System.out.println("Result: " + account.toString());
 	}
 	
 	public void executeExample7(AccountRepository accountRepository) {
-		//Predicate predicate = QAccount.account.memberType.eq(MemberType.BUYER).and(
-		//		              QAccount.account.membershipLevelType.eq(MembershipLevelType.VIP));
-		//List<Account> account = accountRepository.findAll(predicate);
-		//System.out.println("Result: " + account.toString());
+/*		Predicate predicate = QAccount.account.memberType.eq(MemberType.BUYER).and(
+				              QAccount.account.membershipLevelType.eq(CreditCard.VIP));
+		List<Account> account = accountRepository.findAll(predicate);
+		System.out.println("Result: " + account.toString());  */
 	}
+
 	
 	/*
 	@Bean
