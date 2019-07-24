@@ -4,9 +4,11 @@ import javax.persistence.Embeddable;
 
 import com.sk.sample.park.shared.base.ValueObject;
 
+import lombok.Builder;
 import lombok.Data;
 
 @Data
+@Builder
 @Embeddable
 public class CreditCard implements ValueObject {
 	private String cardNumber;
