@@ -34,7 +34,7 @@ public class ParkinglotProxy {
 		return parkinglotClient.findParkinglot(parkinglotid).getContent();
 	}
 	
-	@FeignClient(name="parkinglots", url="http://http://15.164.92.99:11002", configuration=FeignClientConfiguration.class)
+	@FeignClient(name="parkinglots", url="http://15.164.92.99:11002", configuration=FeignClientConfiguration.class)
 	interface ParkinglotClient {
 		@GetMapping("parkinglots/search/findByParkingLotId")
 		Resource<Parkinglot> findParkinglot(@RequestParam("parkingLotId") String parkinglotid);

@@ -20,7 +20,7 @@ public class AccountProxy {
 	}
 
 
-	@FeignClient(name="accounts", url="http://http://15.164.92.99:11001", configuration=FeignClientConfiguration.class)
+	@FeignClient(name="accounts", url="http://15.164.92.99:11001", configuration=FeignClientConfiguration.class)
 	interface AccountClient {
 		@GetMapping("v1/accounts/search/carNumber")
 		Resource<Account> findAccount(@RequestParam("carNumber") String carNumber);
