@@ -9,7 +9,7 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: park-accountr
+      app: park-account
   template:
     metadata:
       labels:
