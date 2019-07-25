@@ -1,0 +1,31 @@
+# vi park-account-application.yaml
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: park-account-deployment
+  labels:
+    app: park-account
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: park-accountr
+  template:
+    metadata:
+      labels:
+        app: park-account
+    spec:
+      containers:
+      - name: park-account
+        image: lunaxi17/skcc-park/gs-spring-boot-docker:1.0
+        ports:
+        - containerPort: 11001
+        imagePullPolicy: Always
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "200m"
+          limits:
+            memory: "1Gi"
+            cpu: "500m"
+
