@@ -122,7 +122,7 @@
 						<manifest>
 							<addClasspath>true</addClasspath>
                 			<classpathPrefix>libs/</classpathPrefix>
-							<mainClass>com.sk.sample.park.account.ParkingApplication</mainClass>
+							<mainClass>com.sk.sample.park.parking.ParkingApplication</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
